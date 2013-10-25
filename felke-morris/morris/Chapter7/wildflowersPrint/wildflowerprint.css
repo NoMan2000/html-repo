@@ -1,0 +1,20 @@
+#wrapper{width:700px;
+}
+
+#contentlogo { color: #000000;
+        font-size:20pt;
+        padding: 10px;
+}
+#imagelogo { float:right;
+	margin:0 0 5px 5px;
+	border:solid;
+}
+.nav { display: none;
+}
+.content { font-family:Verdana,Arial,sans-serif;
+        font-size: 12pt;
+	margin:10px;
+}
+.footer { font-size:xx-small;
+	text-align:center;
+}

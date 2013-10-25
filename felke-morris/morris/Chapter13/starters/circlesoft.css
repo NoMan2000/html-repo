@@ -1,0 +1,21 @@
+body { background-color:#ffffcc;
+       color:#000000;
+       font-family:Arial, Verdana, sans-serif;
+}
+#wrapper {width:590px;
+          margin:auto; 
+}
+#leftcol { float: left;
+           width: 250px;
+}
+#rightcol { margin-left: 260px;
+}
+#footer { font-size:small;
+          font-style:italic;
+}
+
+/* try this out!
+iframe {border-style:none;
+        background-color:#ffffff;
+}
+*/

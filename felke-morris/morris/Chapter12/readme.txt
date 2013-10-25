@@ -1,0 +1,1 @@
+There are no Hands-On Practice sections in Chapter 12.

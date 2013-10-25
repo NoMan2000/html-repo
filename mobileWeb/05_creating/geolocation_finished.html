@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Geolocation example</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="../modernizr-1.7.js"></script>
+    <script type="text/javascript">
+        function getLocation() {
+            if (Modernizr.geolocation) {
+                navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+            }
+
+            function geoSuccess(positionInfo) {
+                document.getElementById("longitude").innerHTML = positionInfo.coords.longitude;
+                document.getElementById("latitude").innerHTML = positionInfo.coords.latitude;
+                document.getElementById("accuracy").innerHTML = positionInfo.coords.accuracy;
+                document.getElementById("altitude").innerHTML = positionInfo.coords.altitude;
+                document.getElementById("altitudeAccuracy").innerHTML = positionInfo.coords.altitudeAccuracy;
+                document.getElementById("heading").innerHTML = positionInfo.coords.heading;
+                document.getElementById("speed").innerHTML = positionInfo.coords.speed;
+            }
+
+            function geoError(positionError) {
+                if (errorInfo.code == 1)
+                    alert("The user denied permission access");
+                else if (errorInfo.code == 2)
+                    alert("Unable to locate you!");
+                else if (errorInfo.code == 3)
+                    alert("Timed out getting location");
+            }
+        }
+        window.onload = getLocation;
+    </script>
+</head>
+<body>
+<h1>Geolocation Example</h1>
+<p>This example uses Geolocation to determine the location of the device.</p>
+<h2>Location data:</h2>
+<p>Longitude: <span id="longitude"></span></p>
+<p>Latitude: <span id="latitude"></span></p>
+<p>Accuracy: <span id="accuracy"></span></p>
+<p>Altitude: <span id="altitude"></span></p>
+<p>Altitude Accuracy: <span id="altitudeAccuracy"></span></p>
+<p>Heading: <span id="heading"></span></p>
+<p>Speed: <span id="speed"></span></p>
+</body>
+</html>

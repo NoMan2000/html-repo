@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Measuring Web Page Performance</title>
+    <meta name="Viewport" content="width=device-width"/>
+
+    <script type='text/javascript'>
+    </script>
+    <style type="text/css">
+    .label {
+    	display: inline-block;
+    	width:160px;
+    }
+    h1 {
+    	font-size: 18pt;
+    }
+    </style>
+</head>
+<body>
+<h1>Measuring Performance</h1>
+<p>Demonstrates using the performance timing data to measure how long certain stages of the document took to complete. 
+Times shown are relative to when the navigation first begins.</p>
+<div id="perfdata">
+<p><span class="label">Request Start: </span><span id="requeststart"></span>ms</p>
+<p><span class="label">onLoad time: </span><span id="onloadtime"></span>ms</p>
+<p><span class="label">DOM Complete: </span><span id="domcomplete"></span>ms</p>
+<p><span class="label">Load Time: </span><span id="loadtime"></span>ms</p>
+</div>
+</body>
+</html>

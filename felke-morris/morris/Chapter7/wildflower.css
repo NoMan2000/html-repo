@@ -1,0 +1,57 @@
+#splashlogo {background-color:#e8b9e8;
+       color: #000000;
+       padding:5px 20px;	
+       font-family: "Times New Roman", serif;
+       position:absolute;
+       text-align:center;
+       z-index:4;
+       top:210px;  
+       left:80px;   
+       border: 2px solid #000000;
+}
+
+#trillium {position:absolute;
+      z-index:3;
+      left:220px;
+      top:80px;
+}
+#pls {position:absolute;
+      z-index:2;
+      left:420px;
+      top:130px;
+}
+#yls {position:absolute;
+      z-index:3;
+      left:300px;
+      top:270px;
+}
+#enter {position:absolute;
+       left:520px;
+       top:350px;
+       font-family:Verdana,sans-serif;
+}
+#wrapper{width:700px;
+}
+
+#contentlogo { background-color:#e8b9e8;
+	font-size:larger;
+	padding:10px;
+	color:#000000;
+}
+#imagelogo { float:right;
+	margin:0 0 5px 5px;
+	border:solid;
+}
+div.nav a { padding:5px;
+	background-color:#e8b9e8;
+	color:#000066;
+	text-decoration:none;
+	font-family:Verdana, Arial, sans-serif;
+	text-align:center;
+}
+.content { font-family:Verdana,Arial,sans-serif;
+	margin:10px;
+}
+.footer { font-size:xx-small;
+	text-align:center;
+}

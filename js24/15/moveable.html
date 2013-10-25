@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Positioning Elements with JavaScript</title>
+   <script type="text/javascript" src="position.js"></script>
+   <style type="text/css">
+   #buttons {
+       text-align:center;
+   }
+
+   #square {
+       position:absolute;
+       top: 150px;
+       left: 100px;
+       width: 200px;
+       height: 200px;
+       border: 2px solid black;
+       padding: 10px;
+       background-color: #e0e0e0;
+   }
+   </style>
+  </head>
+<body>
+    <h1>Positioning Elements</h1>
+   <form action="" name="form1">
+   <div id="buttons">
+   <input type="button" name="left" value="Left"
+     onclick="pos(-1,0);" />
+   <input type="button" name="right" value="Right"
+     onclick="pos(1,0);" />
+   <input type="button" name="up" value="Up"
+     onclick="pos(0,-1);" />
+   <input type="button" name="down" value="Down"
+     onclick="pos(0,1);" />
+   <input type="button" name="hide" value="Hide"
+     onclick="hideSquare();" />
+   <input type="button" name="show" value="Show"
+     onclick="showSquare();" />
+   </div>
+   </form>
+   <hr />
+   <div id="square">
+   <p>This square is an absolutely positioned
+   layer that you can move using the buttons above.</p>
+   </div>
+</body>
+</html>

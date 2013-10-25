@@ -1,0 +1,463 @@
+/* -------- color guide ----------
+#3c6b92 : main blue
+#6acce2 : light blue
+#2c566a : teal accent
+#193742 : dark blue
+#e1d8b9 : sand accent
+#cb7d20 : orange accent
+#51341a : brown
+#995522 : dark orange (used for links or high contrast accents)
+#cb202a : red accent (this color does not encode well, use only for small accents)
+#896287 : purple
+*/
+
+/* to jump to a specific section search for the unique character pair at the front of each TOC section 
+	<<<tip, highlight the special character and use the shortcut for Find Selection Cntr/Cmd + Shift + G >> */
+	
+	/* ----- Style sheet TOC ----------------
+      ^1 Global constants
+	  ^2 Global classes
+	  ^3 Home page layout
+	  ^4 Base Layout styles
+	  ^5 Region detail styles
+		  ^5a Header
+		  ^5b Navigation
+		  ^5c Main Content
+			  ^5d data tables
+			  ^5e spotlight region
+			  ^5f forms
+		  ^5g Secondary Content
+		  ^5h Footer
+*/
+/*It is important to remember that these styles are cumulative and in some cases overwrite the main.css styles. If you add to these styles, make sure you are properly overwriting previous styles*/
+
+/*Explore California Mobile Styles*/
+/* -------- import font rules ---------- */
+@import url(fonts.css);
+/* ^1 --------------------------- global constants -------------------------*/
+body {
+	text-align:center;
+	font: 90% DroidSerif, Georgia, "Times New Roman", Times, serif;
+	background: #3C6B92;
+	background: -moz-linear-gradient(top, #3c6b92 15%, #e1d8b9 90%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#3c6b92), color-stop(90%,#e1d8b9)); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c6b92', endColorstr='#e1d8b9',GradientType=0 ); 
+	margin:0;
+}
+/* ^2 ------ global classes -------- */
+#home .callOut {
+	width: 100%; 
+}
+.callOut {
+	width: auto;
+	margin-left: 10px;
+	margin-right: 10px; 
+}
+
+/* ^3 ------------- home page specfic layout styles ----------- */
+#home #wrapper {
+	background: #fff;
+	background-image: none;
+}
+#actionCall {
+	display: none;
+	float: none;
+	height: 50px;
+}
+#actionCall a {
+	display: none;
+}
+#actionCall h1{
+	display: none;
+}
+#home #mainHeader {
+	float: none;
+}
+#home #contentWrapper{
+	margin: 0 10px;
+	padding: 10px;
+	background: #fff;
+	float: none;
+	width: 90%;
+}
+#home #mainContent {
+	float: none;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+#home #mainContent p.spotlight{
+	padding: 150px 0 0 0;
+	background: url(../_images/cycle_logo.png) no-repeat 50% 0px;
+}
+#home p.videoText {
+	width: auto;
+}
+#home #secondaryContent {
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	padding: 0;
+}
+#home #secondaryContent h1{
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+#videoPodcast {
+	display: none;
+}
+/* ^4 --------------------- base layout styles ------------------- */
+#wrapper {
+	width: 90%;
+}
+#mainHeader {
+	float: none;
+}
+#mainContent {
+	float: none;
+	width: auto;
+	margin:0 10px;
+	clear: both;
+	overflow: hidden;
+	padding: 0;
+}
+#secondaryContent {
+	float: none;
+	margin:0;
+	width: 100%;
+	padding:0;
+}
+#pageFooter {
+	background: #ddd;
+	overflow: hidden;
+	border-top: 1px solid #757575;
+	height: auto;
+	width: 100%;
+}
+/* ^5----------------------- region-detail styles ------------------------ */
+/*  header  ^5a*/
+
+/* navigation ^5b*/
+#siteNav h1{
+	display: block;
+	font-family: DejaVuSansCond, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 1.2em;
+	margin: 0 0 1em;
+	text-align: center;
+	color: #952;
+}
+#siteNav ul {
+	float: none;
+}
+#siteNav > ul {
+	background: inherit;
+	list-style: none;
+	margin:0 auto;
+	padding:0;
+	margin-bottom: 25px;
+	clear: left;
+	width: 90%;
+	height: auto;
+	text-align:center
+}
+#siteNav ul > li {
+	background: #51341a;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	float: none;
+	border-bottom: 1px solid #fff;
+	width: 45%;
+	min-width:170px;
+	display: inline-block
+}
+#siteNav li a:link, #siteNav li a:visited{
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	text-indent: 0px;
+	height: 40px;
+	padding: 0;
+	border: none;
+}
+#siteNav li a.current, #siteNav li a.current:hover {
+	color: #952;
+}
+#siteNav li a:hover, #siteNav li a:active{
+	border: none;
+	color: #cb7d20;
+}
+#siteNav li a:link span.tagline, #siteNav li a:visited span.tagline{
+	display: none;
+}
+#siteNav li ul {
+	display: none;
+}
+.no-js #siteNav li:hover ul, .no-js #siteNav li ul:hover{
+	display: none;
+}
+/* mainContent ^5c */
+#mainContent #contentHeader {
+	margin-bottom: 4em;
+}
+/* keep headlines the same when crumbs are present */
+#wrapper #mainContent header.hasCrumbs {
+	margin-bottom: 6em;
+}
+#mainHeader a.logo {
+	position: relative;
+	left: 0;
+	margin: 0 auto;
+	background: url(data:image/x-png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA4CAIAAAD1mGRUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjhBNkJFREI2ODRBMTFFMEJGOTZFMzhFMURFMTc2M0EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjhBNkJFREM2ODRBMTFFMEJGOTZFMzhFMURFMTc2M0EiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyOEE2QkVEOTY4NEExMUUwQkY5NkUzOEUxREUxNzYzQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyOEE2QkVEQTY4NEExMUUwQkY5NkUzOEUxREUxNzYzQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrBOzNYAAAsDSURBVHja7FxtbFRV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) no-repeat;
+	width: 160px;
+	height: 75px;
+	display: block;
+	top: 0px;
+	left: 0px;
+	text-indent: -1000em;
+	z-index: 2000;
+}
+#mainContent p{
+	text-align: justify;
+	padding: 0 10px
+}
+#mainContent #contentHeader h1 {
+	font: normal 1.2em DejaVuSans, Helvetica, Arial, sans-serif;
+	padding-bottom: .1em;
+	letter-spacing: 1px;
+	border-bottom: 2px solid #3c6b92;
+	color: #3c6b92;
+	margin-top: 1.6em;
+}
+#mainContent #mainArticle {
+	margin-bottom: 25px;
+	float: none;
+}
+
+#mainContent #contentHeader #subLinks {
+	display: block;
+}
+#mainContent #contentHeader #subLinks ul,#mainContent #contentHeader #subLinks p {
+	list-style: none;
+	padding: 0;
+	font-size: 1em;
+}
+#mainContent #contentHeader #subLinks li {
+	float: left;
+	margin: 0;
+	padding-top: 10px;
+}
+#mainContent #contentHeader #subLinks a {
+	font-size: .8em;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+#mainContent #mainArticle h1 {
+	text-align: left;
+	font-size: 1.4em;
+}
+#mainContent #mainArticle #supportOptions h2{
+	padding: 0 10px;
+	color: #cb202a;
+	font-size: 1.2em;
+}
+#mainContent img.articleImage {
+	display: none;
+}
+#mainContent #mainArticle .multiCol {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
+}
+#mainContent #mainArticle ul.faqNav{
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+  	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+  	column-count: 2;
+	column-gap: 20px;
+	 padding: 0;
+	 width: 280px;
+	 margin: 0 auto;
+}
+#mainContent #mainArticle ul.faqNav li{
+	background: none;
+	padding: 0;
+	font-size: .8em;
+	display: block;
+	margin-left:0;
+	width: 130px
+}
+#mainContent #mainArticle ul.faqNav a{
+	background: #cb7d20;
+	padding: 5px;
+	font-family: DejaVuSansCond, Arial, sans-serif;
+	color: #fff;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+#mainContent #mainArticle ul.faqNav a:hover{
+	background: #952;
+	border: none;
+}
+#mainContent #mainArticle dl.faq dd {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #333;
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+}
+/*tour description styles*/
+#mainContent div.tourDescription {
+	border-top: 2px solid #2c566a;
+	float: none;
+	clear: both;
+	padding: 10px 0;
+	margin-bottom: 15px;
+	height: 170px;
+	overflow: hidden;
+	-webkit-transition: height 0.75s ease;
+	-moz-transition: height 0.75s ease;
+	transition: height 0.75s ease;
+}
+#mainContent div.tourDescription:hover {
+	height: 450px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#mainContent div.tourDescription img {
+	display: block;
+	margin: 0 auto 20px;
+	float: none;
+	padding: 0;
+}
+#mainContent .tourDescription h2 {
+	font-size: 1em;
+	color: #193742;
+	font-weight: normal;
+	margin-bottom: .5em;
+	clear: right;
+}
+#mainContent .tourDescription h3.price {
+	font-size: 1em;
+	color: #666;
+	font-weight: normal;
+	font-style: italic;
+	text-align: right;
+	float: none;
+	clear: right;
+	margin: .25em 0 0;
+}
+#mainContent .tourDescription p {
+	font-size: .9em;
+	line-height: 1.5;
+}
+#mainContent .tourDescription span.option {
+	font-weight: bold;
+	text-align: right;
+	display:block;
+}
+#mainContent .tourDescription a.more {
+	display:block;
+	float: right;
+	width: 95px;
+	height: 30px;
+	background: url(../_images/more_bug.gif) no-repeat left top;
+	text-indent: -1000em;
+	margin: 15px 0 0 15px;
+}
+
+#mainContent a.book {
+	display:block;
+	float: right;
+	margin: 16px 25px 25px 0;
+}
+/* data tables ^5d */
+#mainContent fieldset {
+	padding: 40px 0 10px 0;
+	margin: 0 0 2em;
+	width: auto;
+}
+/* form styling ^5f */
+#mainContent input[type=text], #mainContent input[type=email], #mainContent input[type=password], 
+#mainContent input[type=tel], #mainContent input[type=url] {
+	width: 220px;
+	padding-right: 0;
+}
+#mainContent textarea {
+	width: 220px;
+}
+#mainContent #mainArticle form p {
+	padding: 0;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+form #personalInfo label 
+{
+    float:none;
+    display:block;
+}
+#mainContent form#frmContact .col1 {
+	float: none;
+	padding-left: 20px;
+	margin-right: 20px;
+	width: 100%;
+	margin-bottom: 0;
+}
+#mainContent form#frmContact .col2, #mainContent form#frmContact .col3 {
+	float: none;
+	margin-right: 20px;
+	padding-left: 20px;
+	width: 100%;
+}
+#mainContent form#frmContact .col3 {
+	margin-bottom: 2em;
+}
+#mainContent form#frmContact label.break {
+	padding-right: 20px;
+}
+/* secondaryContent ^5g */
+#secondaryContent #specials h2 {
+	font-size: 1.2em;
+	letter-spacing:0;
+	text-align: right;
+}
+
+/* footer region 5h */	
+#pageFooter section {
+	width: 100%;
+	float: none;
+	clear: both;
+	margin-left: 25px;
+}
+#pageFooter section#quickLinks, #pageFooter section#footerResources {
+	float: left;
+	width: 100px;
+	clear: none;
+}
+#pageFooter section:first-child {
+	margin-left: 25px;
+}
+#pageFooter section h1{
+	margin-bottom: 1em;
+}
+#pageFooter section h2{
+	margin-bottom: .5em;
+}
+#pageFooter section p{
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+#pageFooter section em{
+	font-size: .8em;
+}
+#pageFooter section li {
+	margin-bottom: 1em;
+}

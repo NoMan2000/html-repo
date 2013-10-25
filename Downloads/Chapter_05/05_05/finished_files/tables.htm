@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML Tables</title>
+</head>
+<body>
+<h1>Basic table structure</h1>
+<p>In this chapter we&rsquo;ll explore the basics of using tables in HTML. Tables in HTML are designed to allow authors to structure data within rows and columns. While early web designers often abused tables by using them to control the layout of forms and pages, they were never really designed for that task, and should only be used to display tabular data. Tables can contain a wide variety of content including text, paragraphs, preformatted text, images, video, forms, and even other tables.</p>
+<p>The basic structural elements of tables are the <b>&lt;table&gt;</b>,<b> &lt;tr&gt;</b>, <b>&lt;th&gt;</b>, and <b>&lt;td&gt;</b> tags. At the beginning of each table you&rsquo;ll use a &lt;table&gt; tag, which will wrap around the entire table. From there, you begin a row with a table row tag &lt;tr&gt;. Rows are populated with either a table header tag &lt;th&gt; or a table data tag &lt;td&gt;. Table headers represent header cells, while table data elements represent regular table cells.</p>
+<h2>Sample table</h2>
+<p>The following code:</p>
+<pre>
+&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;<br>
+	&lt;caption&gt; Basic table elements&lt;/caption&gt;<br>
+	&lt;tr&gt;<br>
+		&lt;th&gt;Tag&lt;/th&gt;<br>
+		&lt;th&gt;Name&lt;/th&gt;<br>
+		&lt;th&gt;Description&lt;/th&gt;<br>
+	&lt;/tr&gt;<br>
+	&lt;tr&gt;<br>
+		&lt;td&gt;&amp;lt;table&amp;gt;&lt;/td&gt;<br>
+		&lt;td&gt;Table&lt;/td&gt;<br>
+		&lt;td&gt;Identifies what follows as a table.&lt;/td&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;&amp;lt;tr&amp;gt;&lt;/td&gt;<br>
+        &lt;td&gt;Table Row&lt;/td&gt;<br>
+        &lt;td&gt;Establishes a new row within the table&lt;/td&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;&amp;lt;th&amp;gt;&lt;/td&gt;<br>
+        &lt;td&gt;Table Header&lt;/td&gt;<br>
+        &lt;td&gt;Identifies the contents of a cell as being a header for a group of cells.&lt;/td&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;&amp;lt;td&amp;gt;&lt;/td&gt;<br>
+        &lt;td&gt;Table Cell&lt;/td&gt;<br>
+        &lt;td&gt;This element defines the individual table cells of an element.&lt;/td&gt;<br>
+	&lt;/tr&gt;<br>
+&lt;/table&gt;
+</pre>
+<p>Would create the resulting table</p>
+<!--create table here-->
+<table border="1" cellpadding="0" cellspacing="0" width="80%">
+<caption> 
+<h1>Basic table elements:</h1>
+</caption>
+  <tr>
+    <th>Tag</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>&lt;table&gt;</td>
+    <td>Table</td>
+    <td>Identifies what follows as a table.</td>
+  </tr>
+  <tr>
+    <td>&lt;tr&gt;</td>
+    <td>Table Row</td>
+    <td>Establishes a new row within the table</td>
+  </tr>
+  <tr>
+    <td>&lt;th&gt;</td>
+    <td>Table Header</td>
+    <td>Identifies the contents of a cell as being a header for a group of cells.</td>
+  </tr>
+  <tr>
+    <td>&lt;td&gt;</td>
+    <td>Table Cell</td>
+    <td>This element defines the individual table cells of an element.</td>
+  </tr>
+  <tr>
+	  <td colspan="3">Learn more about tables from the <a href="http://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#tabular-datahttp://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#tabular-data" title="HTML5 section on tabular data" target="_blank">HTML5 specification</a>.</td>
+  </tr>
+</table>
+</body>
+</html>

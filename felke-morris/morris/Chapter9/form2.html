@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Form with Pure CSS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{ font-family:Arial,sans-serif;
+      background-color:#eeeeee;
+      color:#000000;
+}
+#myForm {border:3px solid #000000;
+        padding:10px;
+	margin:10px;
+        min-width:500px;
+}
+.myRow {padding-bottom: 20px;
+}
+.mySubmit {margin-left:110px;
+           margin-top:10px;
+}
+.labelCol{float:left;
+          width: 100px; 
+          text-align: right;
+          padding-right:10px;
+} 
+</style>
+</head>
+<body >
+<h2>Sign up for our Newsletter!</h2>
+<div id="myForm">
+<form method="post">
+  <div class="myRow">
+    <label class="labelCol" for="myName">Name:</label>
+    <input type="text" name="myName" id="myName" />
+  </div>
+  <div class="myRow">
+    <label class="labelCol" for="myEmail">E-mail:</label>
+    <input type="text" name="myEmail" id="myEmail" />
+  </div>
+  <div>
+    <label class="labelCol" for="myComments">Comments:</label>
+    <textarea name="myComments" id="myComments" rows="2" cols="30"></textarea>
+  </div>
+  <div class="mySubmit">
+    <input type="submit" value="Get Newsletter" />
+  </div>
+</form>
+</div>
+</body>
+</html>

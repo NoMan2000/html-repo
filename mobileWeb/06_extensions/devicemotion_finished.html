@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Complex Motion Example</title>
+        <meta name = "viewport" content="width=device-width, user-scalable=0"/>
+        <script type="text/javascript" language="javascript">
+            var time = 0;
+            function handleMotion(e) {
+                time += e.interval;
+
+                if (time <= 1.5)
+                    return;
+
+                time = 0;
+                var displayStr = "Acceleration: ";
+
+                displayStr += "<p>x: " + e.acceleration.x + "</p>";
+                displayStr += "<p>y: " + e.acceleration.y + "</p>";
+                displayStr += "<p>z: " + e.acceleration.z + "</p>";
+
+                displayStr += "Rotation Rate: ";
+
+                displayStr += "<p>alpha: " + e.rotationRate.alpha + "</p>";
+                displayStr += "<p>beta: " + e.rotationRate.beta + "</p>";
+                displayStr += "<p>gamma: " + e.rotationRate.gamma + "</p>";
+
+                document.querySelector("#output").innerHTML = displayStr;
+            }
+
+            window.addEventListener("devicemotion", handleMotion);
+    	</script>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+    </body>
+</html>

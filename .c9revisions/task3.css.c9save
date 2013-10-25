@@ -1,0 +1,4 @@
+{"ts":1380564595683,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1380564599583,"patch":[[{"diffs":[[1,"#task3{\n\tcolor:brown;\n\tfont-size: 1.2em;\n\tfont-family: Arial,Verdana,sans-serif;\n}\n"]],"start1":0,"start2":0,"length1":0,"length2":83}]],"length":83,"saved":false}
+{"ts":1380566218420,"patch":[[{"diffs":[[0,"erif;\n}\n"],[1,"#task6{\n    background-color:#FFF8DC;\n    color:#000099;\n    font-family:Arial, Helvetica, sans-serif;\n}"]],"start1":75,"start2":75,"length1":8,"length2":112}]],"length":187,"saved":false}
+{"ts":1380566259065,"patch":[[{"diffs":[[0,"erif;\n}\n"],[1,"body, "],[0,"#task6{\n"]],"start1":75,"start2":75,"length1":16,"length2":22}]],"length":193,"saved":false}

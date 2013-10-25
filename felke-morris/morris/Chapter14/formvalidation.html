@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>JavaScript Practice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+div {padding-bottom:10px; width:250px; text-align:right; }
+label {padding-right:5px; }
+</style>
+<script type="text/javascript">
+ <!-- <![CDATA[
+function validateForm()
+{
+ if (document.forms[0].userName.value == "" )
+    {alert("Name field cannot be empty.");
+        return false;
+   } // end if
+   if (document.forms[0].userAge.value < 18)
+   {
+      alert("Age is less than 18. You are not an adult");
+      return false;
+   }  // end if
+   alert("Name and Age are valid.");
+   return true;
+      
+} // end function validateForm
+  
+// ]]> -->
+</script>	
+</head>
+<body>
+<h2>JavaScript Form Handling</h2>
+<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateForm( );">
+ <div>
+    <label for="userName">Name:</label>
+    <input type="text" name="userName" id="userName" />
+ </div>
+ <div>
+    <label for="userAge">Age:</label>
+    <input type="text" name="userAge" id="userAge" />
+ </div>
+ <div>
+    <input type="submit" value="Send information" />
+ </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <style type="text/css" rel="stylesheet">
+          div {
+        width: 500px;
+        height:500px;
+        background-color:LightSteelBlue;
+       
+        }
+          
+        </style>
+    </head>
+    <body>
+ <div>
+ Some Text
+ </div>
+ <p>
+     More Text P 
+ </p>
+ <p id="testId">
+     ID
+ </p>
+ <p class="testClass" onclick="alert('you Click here!')">
+     Class
+ </p>
+ <button id="buttonID">
+     What the button should say?
+ </button>
+ <script>
+     document.getElementById('testId').addEventListener('click', function(){
+         alert('you will Never be as awesome as Carl');
+     }, false);
+     document.getElementById('buttonID').addEventListener('click', function(){
+        alert("You have clicked on the almighty button!"); 
+     }, false);
+ </script>
+    </body>
+</html>

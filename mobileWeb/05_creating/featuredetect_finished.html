@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Using Client-Side Feature Detection</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="../modernizr-1.7.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function testFeatures() {
+            // Test for JavaScript Features
+            document.querySelector("#geoloc").innerHTML = Modernizr.geolocation ? "supported" : "not supported";
+            document.querySelector("#touch").innerHTML = Modernizr.touch ? "supported" : "not supported";
+
+            // Test for HTML5 Features
+            document.querySelector("#svg").innerHTML = Modernizr.svg ? "supported" : "not supported";
+            document.querySelector("#canvas").innerHTML = Modernizr.canvas ? "supported" : "not supported";
+        }
+
+        window.onload = testFeatures;
+    </script>
+    <style type="text/css">
+        .animtest, .noanimtest 
+        {
+            display: none;
+        }
+        .cssanimations .animtest {
+            display:block;
+        }
+        .no-cssanimations .noanimtest 
+        {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<h1>Using Client-Side Feature Detection</h1>
+<p>This example shows how to use Modernizr to detect support for features in a given browser. All
+of the code runs on the client side, and uses both JavaScript and CSS to detect the support of
+individual features instead of relying on server-side browser sniffing.</p>
+<h3>JavaScript Features</h3>
+<p>Geolocation: <span id="geoloc"></span></p>
+<p>Touch Events: <span id="touch"></span></p>
+<h3>HTML5 Features</h3>
+<p>SVG: <span id="svg"></span></p>
+<p>Canvas: <span id="canvas"></span></p>
+<h3>CSS3 Features</h3>
+<p class="animtest">CSS animations supported</p>
+<p class="noanimtest">CSS animations not supported</p>
+</body>
+</html>

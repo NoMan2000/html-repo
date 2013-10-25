@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM localStorage</title>
+	    <meta name="Viewport" content="width=device-width" />
+        <script type="text/javascript">
+            function initialize() {
+                // Test to see if we support the Storage API
+                var bSupportsLocal = (('localStorage' in window) && window['localStorage'] !== null);
+                var bSupportsSession = (('sessionStorage' in window) && window['sessionStorage'] !== null);
+
+                // if either one is not supported, then bail on the demo
+                if (!bSupportsLocal || !bSupportsSession) {
+                    document.getElementById('infoform').innerHTML = "<p>Sorry, this browser does not support the W3C Storage API.</p>";
+                    return;
+                }
+
+                // if the localStorage object has some content, restore it
+                if (window.localStorage.length != 0) {
+                    document.getElementById('firstName').value = window.localStorage.getItem('firstName');
+                    document.getElementById('lastName').value = window.localStorage.getItem('lastName');
+                    document.getElementById('postCode').value = window.localStorage.getItem('postCode');
+                }
+            }
+
+
+            /***********************************************
+            ** localStorage examples
+            ***********************************************/
+            function storeLocalContent(fName, lName, pCode) {
+                window.localStorage.setItem('firstName', fName);
+                window.localStorage.setItem('lastName', lName);
+                window.localStorage.setItem('postCode', pCode);
+            }
+
+            function clearLocalContent(strToStore) {
+                window.localStorage.clear();
+            }
+
+            window.onload = initialize;
+
+        </script>
+    </head>
+    <body>
+        <h1>Using DOM localStorage</h1>
+        <div>
+            The <a href="http://www.w3.org/TR/webstorage/">W3C Web Storage API</a> 
+        	provides two new ways of storing information on the client side - 
+			the <code>sessionStorage</code> and <code>localStorage</code> objects. This demo shows how to 
+			use the localStorage feature to save information in the browser without using 
+			cookies.</div>
+        <h2>Sample Form</h2>
+        <p>Try entering information in the form, then closing and reopening the page.</p>
+        <div>
+            <form action="" method="post" id="infoform">
+				<fieldset name="LocalStorage" id="ls">
+				<legend>Personal Information</legend>
+				<p><label id="fnLabel" for="firstName">First Name: </label>
+                <input id="firstName" name="firstName" /></p>
+				<p><label id="lnLabel" for="lastName">Last Name: </label>
+                <input id="lastName" name="lastName" /></p>
+				<p><label id="pclabel" for="postCode">Postal Code: </label>
+                <input id="postCode" name="postCode" /></p>
+				<input type="button" value="Save" onclick="storeLocalContent(
+                    document.querySelector('#firstName').value,
+                    document.querySelector('#lastName').value,
+                    document.querySelector('#postCode').value
+                )">
+				<input type="button" value="Clear" onclick="clearLocalContent()">
+				</fieldset>
+			</form>
+        </div>
+    </body>
+</html>

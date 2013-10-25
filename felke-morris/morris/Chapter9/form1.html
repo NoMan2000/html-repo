@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Form with Table &amp; CSS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{ font-family:Arial,sans-serif;
+      background-color:#eeeeee;
+      color:#000000;
+}
+table {border:solid 3px #000000;
+       width:100%;
+}
+td {padding: 5px;
+}
+.myLabel {text-align:right;
+}
+</style>
+</head>
+<body >
+<h2>Sign up for our Newsletter!</h2>
+<form method="post">
+<table>
+ <tr>
+   <td class="myLabel"><label for="myName">Name:</label></td>
+   <td><input type="text" name="myName" id="myName" /></td>
+ </tr>
+ <tr>
+   <td class="myLabel"><label for="myEmail">E-mail:</label></td>
+   <td><input type="text" name="myEmail" id="myEmail" /></td>
+ </tr>
+ <tr>
+   <td class="myLabel"><label for="myComments">Comments:</label></td>
+   <td><textarea name="myComments" id="myComments" rows="2" cols="60"></textarea>
+   </td>
+ </tr>
+  <tr>
+   <td colspan="2">
+    <input type="submit" value="Get Newsletter" />
+   </td>
+ </tr>
+</table>
+</form>
+</body>
+</html>

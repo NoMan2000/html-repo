@@ -1,0 +1,29 @@
+Lab instructions for Chapter 06: Controlling Styling
+
+In this lab, you’ll work on the sample Up and Running with HTML reference site to add site-wide styling to the pages and enhance the page's layout and formatting through writing styles
+
+1.	Link external style sheet site-wide
+			a.	Applies to: all pages
+			b.	In the head of each page, use the link element to link to the styles.css file. Be sure to remember to define the styles.css relationship to stylesheet.
+
+2.	Set the background color of pages
+			a.	Applies to: styles.css
+			b.	In the styles.css file, find the html,body rule (which controls the html and body element)
+			c. Set the background color to rgb(184, 126, 84)
+
+3.	Float images
+			a.	Applies to: styles.css
+			b.	Find the .flowRight and .flowLeft selectors (around line 98)
+			c. Set the float property for flowRight to right and flowLeft to left
+			d. The float property controls how elements position themselves and how content flows around them. Save and preview the intro.htm file to see how the text flows around the images based on the class applied to them.
+			
+3.	Set table styling
+			a.	Applies to: styles.css
+			b.	Find the td,th selector (around line 80)
+			c. Set the padding property to 10px. This will replace the attribute cellpadding's value.
+			d. Find the .center class selector (around line 85)
+			e. Using the text-align property, set the text alignment to center.
+			
+Take time to save and preview the site as you modify the styles. After you're finished, go through the style sheet. Try to match the selectors you see to the elements on pages and determine what the properties in the rule are controlling. Don't worry if you don't immediately recognize which element's the selectors are targeting, the goal is to begin the process of understanding how CSS selectors target elements on the page, and how changing certain properties effects those elements visually.
+
+As always, don't forget to compare your completed files with the files in finished_files directory.

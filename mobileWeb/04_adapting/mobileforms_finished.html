@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Forms and Mobile</title>
+<link rel="stylesheet" href="../../common.css" type="text/css">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+    label
+    {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+@media screen and (max-width:480px) 
+{
+    label 
+    {
+        width: auto;
+        text-align: left;
+        display: block;
+    }
+}    
+</style>
+</head>
+
+<body>
+<h1>HTML5 Form Elements on Mobile Devices</h1>
+<p>Some mobile device browsers provide support for HTML5 forms attributes and input types in order
+to allow the user to more easily enter certain kinds of data. Phones that use virtual, on-screen keyboards
+can provide customized versions of those keyboards that are optimized for those data types, such as email addresses,
+URLs, numbers, telephone numbers, etc.</p>
+<p>This example file contains form fields for number, email, URL, and tel. </p>
+<form action="" method="get">
+<p><label>Numeric Input Field:</label><input name="Num1" type="number" min="0" max="20" step="1" /></p>
+<p><label>Email Input Field:</label><input name="Email1" type="email" /></p>
+<p><label>URL Input Field:</label><input name="URL1" type="url" required /></p>
+<p><label>Tel Input Field:</label><input name="tel1" type="tel" /></p>
+<p><input type="submit" value="submit" /></p>
+</form>
+</body>
+</html>

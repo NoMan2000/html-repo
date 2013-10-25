@@ -1,0 +1,485 @@
+#####################################################################
+# Example Snippets File for Mobile Web Development Fundamentals
+#####################################################################
+
+
+------------------------------------------------
+Mobile Web Development Resources:
+------------------------------------------------
+Mobile Web Best Practices: http://www.w3.org/TR/mobile-bp/  
+Quirksmode Site: http://www.quirksmode.org/mobile/ 
+User Agent Strings: http://www.useragentstring.com/
+
+HTML5 and Related Web Applications:
+	HTML5 http://www.w3.org/TR/html5/ 
+	Geolocation API: http://dev.w3.org/geo/api/spec-source.html
+	Local Storage API: http://dev.w3.org/html5/webstorage/
+	Offline Application Cache: http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html
+
+Vendor-Provided Resources:
+	Apple:
+		Getting Started with iOS Web Apps: http://developer.apple.com/library/safari/#referencelibrary/GettingStarted/GS_iPhoneWebApp/_index.html#//apple_ref/doc/uid/TP40008134
+	Google:
+		Web Applications Overview: http://developer.android.com/guide/webapps/index.html
+		Targeting Screens from Web Apps: http://developer.android.com/guide/webapps/targeting.html
+	Microsoft:
+		IE Developer Guide: http://msdn.microsoft.com/en-us/ie/ff468705.aspx
+		Designing Web Sites for Phone Browsers (PDF): http://go.microsoft.com/?linkid=9713253
+	Mozilla:
+		Fennec (Mobile Firefox) Home Page: https://wiki.mozilla.org/Mobile/Fennec
+	Opera:
+		Opera Mobile Home: http://dev.opera.com/articles/mobile/
+		Opera Mobile 10 Intro: http://dev.opera.com/articles/view/opera-mobile-10-developers-introduction/
+
+------------------------------------------------
+Viewport
+------------------------------------------------
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="Viewport" content="width=device-width" />
+
+------------------------------------------------
+Mobile Development on Desktop
+------------------------------------------------
+
+User Agent Tools
+
+	Firefox
+		https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/
+		
+	Chrome
+		https://chrome.google.com/webstore/detail/aafciojnlamllgpkpdkbamkfgbofhgcj
+
+User Agent Strings:
+    IE Mobile User Agent
+    	Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; <make>; <model>)
+
+    iOS User Agent
+		Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7    
+		Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7
+		Mozilla/5.0 (iPad; U; CPU OS 3_2_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B500 Safari/531.21.10
+
+    Opera Mobile User Agent
+		Opera/9.80 (S60; SymbOS; Opera Mobi/498; U; en-GB) Presto/2.4.18 Version/10.00
+
+    Android Chrome Mobile User Agent
+		Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; HTC_DesireS_S510e Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+
+    Mozilla Fennec User Agent
+		Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.13) Gecko/20101203 Mozilla/5.O(Android;Linux armv7l;rv:2.1) Gecko/20110318 Firefox/4.0b13pre Fennec/4.0 ( .NET CLR 3.5.30729)
+		Mozilla/5.0 (Maemo; Linux armv7l; rv:2.1) Gecko/20110318 Firefox/4.0b13pre Fennec/4.0
+		Mozilla/5.0 (Android; Linux armv7l; rv:2.0) Gecko/20110103 Firefox/4.0 Fennec/4.0
+
+	BlackBerry User Agent
+		Mozilla/5.0 (BlackBerry; U; BlackBerry 9800; en-US) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.201 Mobile Safari/534.1+
+		Mozilla/5.0 (BlackBerry; U; BlackBerry 9800; en-US) AppleWebKit/534.1+ (KHTML, like Gecko)
+
+
+------------------------------------------------
+Mobile Forms
+------------------------------------------------
+
+@media screen and (max-width:480px) 
+{
+    label 
+    {
+        width: auto;
+        text-align: left;
+        display: block;
+    }
+}
+
+<p><label>Numeric Input Field:</label><input name="Num1" type="number" min="0" max="20" step="1" /></p>
+<p><label>Email Input Field:</label><input name="Email1" type="email" /></p>
+<p><label>URL Input Field:</label><input name="URL1" type="url" required /></p>
+<p><label>Tel Input Field:</label><input name="tel1" type="tel" /></p>
+
+------------------------------------------------
+Media Queries
+------------------------------------------------
+
+CSS:
+
+@media screen and (min-width: 801px) {
+}
+
+/* -------------------- */
+@media screen and (max-width:800px) {
+	#masthead {
+		font-size:24pt;
+		font-family:"Times New Roman", Times, serif;
+		background-color:olive;
+		color: white;
+		text-align:right;
+	}
+	
+	#container {
+		font-size: 16pt;
+		position:inherit;
+		width: 100%;
+	}
+	
+	#left_col {
+		display:block;
+		width:100%;
+	}
+	#left_col ul {
+		margin-left:0pt;
+		padding: 0;
+	}
+	#left_col li {
+		display:inline;
+		margin-right:5pt;
+		list-style-type:none;
+	}
+	
+	#page_content {
+		display:block;
+	}
+	
+	#footer {
+		border: 1px black solid;
+		padding: 5pt;
+	}	
+}
+
+
+
+------------------------------------------------
+Feature Detection
+------------------------------------------------
+
+    <script src="../modernizr-1.7.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function testFeatures() {
+            // Test for JavaScript Features
+            document.querySelector("#geoloc").innerHTML = Modernizr.geolocation ? "supported" : "not supported";
+            document.querySelector("#touch").innerHTML = Modernizr.touch ? "supported" : "not supported";
+
+            // Test for HTML5 Features
+            document.querySelector("#svg").innerHTML = Modernizr.svg ? "supported" : "not supported";
+            document.querySelector("#canvas").innerHTML = Modernizr.canvas ? "supported" : "not supported";
+        }
+
+        window.onload = testFeatures;
+    </script>
+    <style type="text/css">
+        .animtest, .noanimtest 
+        {
+            display: none;
+        }
+        .cssanimations .animtest {
+            display:block;
+        }
+        .no-cssanimations .noanimtest 
+        {
+            display:block;
+        }
+    </style>
+
+
+------------------------------------------------
+GeoLocation
+------------------------------------------------
+            if (Modernizr.geolocation) {
+                navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+            }
+
+            function geoSuccess(positionInfo) {
+                document.getElementById("longitude").innerHTML = positionInfo.coords.longitude;
+                document.getElementById("latitude").innerHTML = positionInfo.coords.latitude;
+                document.getElementById("accuracy").innerHTML = positionInfo.coords.accuracy;
+                document.getElementById("altitude").innerHTML = positionInfo.coords.altitude;
+                document.getElementById("altitudeAccuracy").innerHTML = positionInfo.coords.altitudeAccuracy;
+                document.getElementById("heading").innerHTML = positionInfo.coords.heading;
+                document.getElementById("speed").innerHTML = positionInfo.coords.speed;
+            }
+
+            function geoError(positionError) {
+                if (errorInfo.code == 1)
+                    alert("The user denied permission access");
+                else if (errorInfo.code == 2)
+                    alert("Unable to locate you!");
+                else if (errorInfo.code == 3)
+                    alert("Timed out getting location");
+            }
+
+------------------------------------------------
+Data URI
+------------------------------------------------
+
+<img alt="logo" src='data:image/x-png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA4CAIAAAD1mGRUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjhBNkJFREI2ODRBMTFFMEJGOTZFMzhFMURFMTc2M0EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjhBNkJFREM2ODRBMTFFMEJGOTZFMzhFMURFMTc2M0EiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyOEE2QkVEOTY4NEExMUUwQkY5NkUzOEUxREUxNzYzQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyOEE2QkVEQTY4NEExMUUwQkY5NkUzOEUxREUxNzYzQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrBOzNYAAAsDSURBVHja7FxtbFRV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'/>
+
+------------------------------------------------
+LocalStorage
+------------------------------------------------
+	initialize
+                // Test to see if we support the Storage API
+                var bSupportsLocal = (('localStorage' in window) && window['localStorage'] !== null);
+
+                // if localStorage is not supported, then bail on the demo
+                if (!bSupportsLocal) {
+                    document.getElementById('infoform').innerHTML = "<p>Sorry, this browser does not support the W3C Storage API.</p>";
+                    return;
+                }
+
+                // if the localStorage object has some content, restore it
+                if (window.localStorage.length != 0) {
+                    document.getElementById('firstName').value = window.localStorage.getItem('firstName');
+                    document.getElementById('lastName').value = window.localStorage.getItem('lastName');
+                    document.getElementById('postCode').value = window.localStorage.getItem('postCode');
+                }
+
+	Storage
+
+            function storeLocalContent(fName, lName, pCode) {
+                window.localStorage.setItem('firstName', fName);
+                window.localStorage.setItem('lastName', lName);
+                window.localStorage.setItem('postCode', pCode);
+            }
+
+            function clearLocalContent(strToStore) {
+                window.localStorage.clear();
+            }
+
+
+------------------------------------------------
+Server-Side Detection Resources
+------------------------------------------------
+http://wurfl.sourceforge.net/
+http://detectmobilebrowsers.mobi/
+
+
+------------------------------------------------
+Server-Side Detection PHP
+------------------------------------------------
+
+	if (stripos($user_agent,'ipod') !== false || stripos($user_agent,'iphone') !== false)
+		return true;
+
+	if (stripos($user_agent,'android') !== false)
+		return true;
+
+	if (stripos($user_agent,'opera mobi') !== false)
+		return true;
+
+	if (stripos($user_agent,'windows phone os') !== false && stripos($user_agent,'iemobile') !== false)
+		return true;
+
+	if (stripos($user_agent,'fennec') !== false)
+		return true;
+
+
+
+------------------------------------------------
+Server-Side Detection ASP.NET
+------------------------------------------------
+
+Page-Based Detection
+
+        string sUA = Request.UserAgent.Trim().ToLower();
+
+        uaString.InnerText = Request.UserAgent;
+
+        if (sUA.Contains("ipod") || sUA.Contains("iphone"))
+            isMobile = true;
+
+        if (sUA.Contains("android"))
+            isMobile = true;
+
+        if (sUA.Contains("opera mobi"))
+            isMobile = true;
+
+        if (sUA.Contains("windows phone os") && sUA.Contains("iemobile"))
+            isMobile = true;
+
+        if (sUA.Contains("fennec"))
+            isMobile = true;
+
+
+------------------------------------------------
+Mobile Performance Measuring
+------------------------------------------------
+
+    function calcPerfNumbers() {
+        if (!!window.performance) {
+            // navigation time is loadEventEnd - navigationStart
+            var timingData = window.performance.timing;
+            document.querySelector("#loadtime").innerHTML = (timingData.loadEventEnd - timingData.navigationStart);
+            document.querySelector("#onloadtime").innerHTML = (timingData.loadEventEnd - timingData.loadEventStart);
+            document.querySelector("#domcomplete").innerHTML = (timingData.domComplete - timingData.navigationStart);
+            document.querySelector("#requeststart").innerHTML = (timingData.requestStart - timingData.navigationStart);
+        }
+        else {
+            document.querySelector("#perfdata").innerHTML = "<p>Sorry, this browser does not support the <code>performance</code> object</p>";
+        }
+    }
+
+    function init() {
+        setTimeout(calcPerfNumbers, 500);
+    }
+
+    window.onload = init;
+
+
+------------------------------------------------
+Creating Full-Screen Web Apps
+------------------------------------------------
+
+<meta content="width=device-width, user-scalable=no, initial-scale=1.0" name="viewport" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link rel="apple-touch-icon" href="images/myappicon.png"/>
+
+<link rel="apple-touch-startup-image" href="images/startup.png"/>
+
+
+------------------------------------------------
+Customizing the User Interface
+------------------------------------------------
+
+
+<style type="text/css">
+#customHold {
+	-webkit-touch-callout: none;
+}
+
+#customTap {
+	-webkit-tap-highlight-color: #f00;
+}
+
+h1 {
+	-webkit-user-select: none;
+}
+</style>
+
+
+------------------------------------------------
+Miscellaneous Browser Capabilities
+------------------------------------------------
+
+	Simple Orientation
+
+	onorientationchange="updateOrientation();"  onload="updateOrientation();"
+
+                var displayStr = "Orientation : ";
+
+                switch (window.orientation) {
+                    case 0:
+                        displayStr += "Portrait (0 deg)";
+                        break;
+
+                    case -90:
+                        displayStr += "Landscape (-90 deg clockwise)";
+                        break;
+
+                    case 90:
+                        displayStr += "Landscape (90 deg counterclockwise)";
+                        break;
+
+                    case 180:
+                        displayStr += "Portrait (180 upside-down)";
+                        break;
+
+                }
+                document.querySelector("#output").innerHTML = displayStr;
+
+	Complex Motion
+
+            var time=0;
+            function handleMotion(e) {
+            	time += e.interval;
+
+            	if (time <= 1.5)
+            		return;
+            		
+            	time=0;
+                var displayStr = "Acceleration: ";
+
+				displayStr += "<p>x: " + e.acceleration.x + "</p>";
+				displayStr += "<p>y: " + e.acceleration.y + "</p>";
+				displayStr += "<p>z: " + e.acceleration.z + "</p>";
+				
+				displayStr += "Rotation Rate: ";
+
+				displayStr += "<p>alpha: " + e.rotationRate.alpha + "</p>";
+				displayStr += "<p>beta: " + e.rotationRate.beta + "</p>";
+				displayStr += "<p>gamma: " + e.rotationRate.gamma + "</p>";
+				
+                document.querySelector("#output").innerHTML = displayStr;
+            }
+            
+            window.addEventListener("devicemotion", handleMotion);
+
+
+	Using Touch Events
+	
+	function handleSwipe(elem, func) {
+		var swipeDir;
+		var startX, startY;
+		var deltaX;
+		var yThreshhold = 30;
+		var xThreshhold = 50;
+		 
+		 function trackTouchMove(e) {
+			if (e.changedTouches.length != 1) {
+				stopTouch();
+			}
+			else {
+				deltaX = e.touches[0].pageX - startX;
+				var deltaY = e.touches[0].pageY - startY;
+				if (swipeDir == null) {
+					swipeDir = deltaX;
+					e.preventDefault();
+				}
+				else if (Math.abs(deltaY ) > yThreshhold) {
+					stopTouch();
+				}
+				e.preventDefault();
+			}
+		}
+		
+		 function handleTouchEnd(e) {
+			stopTouch();
+			if (Math.abs(deltaX) > xThreshhold) {
+				func(elem, deltaX > 0 ? 'right' : 'left' );
+			}
+		 }
+		 
+		function handleTouchStart(e) {
+			document.querySelector("#output").innerHTML = "";
+			if (e.touches.length == 1)	{
+				startX = e.touches[0].pageX;
+				startY = e.touches[0].pageY;
+				elem.addEventListener('touchmove', trackTouchMove, false);
+				elem.addEventListener('touchend', handleTouchEnd, false);
+				
+				e.preventDefault();
+			}
+		}
+
+		function stopTouch() {
+			elem.removeEventListener('touchmove', trackTouchMove);
+			elem.removeEventListener('touchend', handleTouchEnd);
+		}
+	
+		elem.addEventListener("touchstart", handleTouchStart, false);
+	}
+	
+	function swipe(elem, direction) {
+		document.querySelector("#output").innerHTML = "You swiped: " + direction + " on element: " + elem.tagName;
+	}
+	
+	window.onload = function() {
+		handleSwipe(document.body, swipe);
+	}
+	
+
+------------------------------------------------
+Explore CA
+------------------------------------------------
+	mobile.css
+	
+	

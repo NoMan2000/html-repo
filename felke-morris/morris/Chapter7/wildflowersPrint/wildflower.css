@@ -1,0 +1,25 @@
+#wrapper{width:700px;
+}
+
+#contentlogo { background-color:#e8b9e8;
+	font-size:larger;
+	padding:10px;
+	color:#000000;
+}
+#imagelogo { float:right;
+	margin:0 0 5px 5px;
+	border:solid;
+}
+div.nav a { padding:5px;
+	background-color:#e8b9e8;
+	color:#000066;
+	text-decoration:none;
+	font-family:Verdana, Arial, sans-serif;
+	text-align:center;
+}
+.content { font-family:Verdana,Arial,sans-serif;
+	margin:10px;
+}
+.footer { font-size:xx-small;
+	text-align:center;
+}

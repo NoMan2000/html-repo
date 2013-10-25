@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>CSS Pseudo-class Example 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body { margin: 0 auto;
+      width:550px;
+      text-align:center;
+}
+#button a { 
+  border: 2px inset #CCCCCC; 
+  padding: 3px 15px;
+  color: #FFFFFF; 
+  background-color: #000066; 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1.2em; 
+  font-weight: bold; 
+  text-align: center; 
+  text-decoration:none;
+} 
+
+#button a:link { 
+   color: #FFFFFF; 
+}
+#button a:visited { 
+   color: #CCCCCC; 
+}
+#button a:focus  {
+      color: #DDA0DD;
+      background-color: #000000; 
+      border:2px outset #000000;
+}
+#button a:hover { 
+   color: #66CCFF; 
+   border:2px outset #cccccc;
+} 
+#button a:active  {
+      color: #DDA0DD; 
+      border:2px outset #000000;
+}
+
+</style>
+</head>
+
+<body>
+
+  <h1>CSS Buttons!</h1>
+<div id="button">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="sevices.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+<p>Visit <a href="http://yahoo.com">Yahoo!</a>.</p>
+</body>
+</html>
